@@ -19,6 +19,7 @@ const useData = <T>(endpoint: string) => {
       .then((res) => {
         setData(res.data.results);
         setLoading(false);
+        setError('')
       })
       .catch((err) => {
         setError(err.message);
